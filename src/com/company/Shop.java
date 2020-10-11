@@ -10,14 +10,30 @@ public class Shop {
     private Security security;
     private Client client;
 
+    public Shop(String name, String address, Manager manager, Cashier cashier, Security security, Client client) {
+        this.name = name;
+        this.address = address;
+        this.manager = manager;
+        this.cashier = cashier;
+        this.security = security;
+        this.client = client;
+    }
+
     public void open (){
-        System.out.println("Открыться");
+        System.out.println("Магазин открывается");
     }
-    public void onlunch(){
-        System.out.println("Пойти на обед");
-    }
+
     public void sellProduct (){
-        System.out.println("Продавать товары");
+        System.out.println("Магазин начинает продавать товары");
+        client.aboutProduct();
+        manager.work();
+        client.buy();
+        cashier.work();
+        security.work();
+    }
+
+    public void onlunch(){
+        System.out.println("Магазин закрывается на обед");
     }
 
     @Override

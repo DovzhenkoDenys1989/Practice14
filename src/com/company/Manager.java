@@ -10,18 +10,18 @@ public class Manager extends Employee {
     }
 
     public String consultation (){
-       return "консультирует клиента";
+        return "консультирует клиента";
     }
     public String forDiscount () {
         return "расказывает про скидки";
     }
     public String giveAdvice () {
-        return "советует";
+        return "советует, какой товар купить";
     }
 
     @Override
     public void work (){
-        System.out.println("Менеджер" + " " + consultation() + " , " +  forDiscount() + " и " + giveAdvice());
+        System.out.println("Менеджер" + " " + consultation() + ", " +  forDiscount() + " и " + giveAdvice());
     }
 
     @Override

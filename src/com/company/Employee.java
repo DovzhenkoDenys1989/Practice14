@@ -11,12 +11,12 @@ public class Employee extends Person {
         super(fullName, telephone);
     }
 
-
     public void goToWork (){
-        System.out.println("Прийти на работу");
+        System.out.println("Сотрудники приходят на работу");
     }
+
     public void lunch (){
-        System.out.println("Пойти на обед");
+        System.out.println("Сотрудники идут на обед");
     }
     public void work (){
         System.out.println("Делать работу");

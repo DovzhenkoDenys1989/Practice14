@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-       Person person = new Person("Иванов Иван Иваныч", "+380675555555");
+       Person person = new Person(".....", ".....");
        person.hello();
        person.goodbye();
 
@@ -11,7 +11,7 @@ public class Main {
        client.aboutProduct();
        client.buy();
 
-       Employee employee = new Employee("Данилов Данил Данилович", "+380985555555");
+       Employee employee = new Employee(".....", ".....");
        employee.goToWork();
        employee.lunch();
        employee.work();
@@ -30,7 +30,7 @@ public class Main {
        security.talkRadio();
        security.work();
 
-       Shop shop = new Shop();
+       Shop shop = new Shop("SportMaster", "проспект Соборный, 45", manager,cashier,security,client);
 
        //1
        shop.open();
@@ -38,19 +38,12 @@ public class Main {
 
        //2
        shop.sellProduct();
-       client.aboutProduct();
-       manager.work();
-       client.buy();
-       cashier.work();
-       security.work();
 
        //3
        shop.onlunch();
        employee.lunch();
     }
 }
-
-
 //        1. Наследование. Реализовать иерархию классов с полями и методами
 //        2. Реализовать работу методов, эмулируя действия выводом текста в консоль. Например,
 //        при выполнении метода «консультировать» выводить на экран текст: «Консультант
