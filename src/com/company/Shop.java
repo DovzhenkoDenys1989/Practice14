@@ -21,6 +21,9 @@ public class Shop {
 
     public void open (){
         System.out.println("Магазин открывается");
+        manager.goToWork();
+        cashier.goToWork();
+        security.goToWork();
     }
 
     public void sellProduct (){
@@ -34,6 +37,9 @@ public class Shop {
 
     public void onlunch(){
         System.out.println("Магазин закрывается на обед");
+        manager.lunch();
+        cashier.lunch();
+        security.lunch();
     }
 
     @Override

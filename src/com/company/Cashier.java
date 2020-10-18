@@ -5,8 +5,9 @@ import java.util.Objects;
 public class Cashier extends Employee {
     private byte cashierNumber;
 
-    public Cashier(String fullName, String telephone) {
-        super(fullName, telephone);
+    public Cashier(String fullName, String dateOfBirth, String telephone, String employmentDate, double salary, String presence, byte cashierNumber) {
+        super(fullName, dateOfBirth, telephone, employmentDate, salary, presence);
+        this.cashierNumber = cashierNumber;
     }
 
     public String countMoney (){
@@ -16,6 +17,18 @@ public class Cashier extends Employee {
     @Override
     public void work (){
         System.out.println("Кассир продает товар" + " и " + countMoney());
+    }
+
+    @Override
+    public void goToWork() {
+        super.goToWork();
+        System.out.print(" - кассир. ");
+    }
+
+    @Override
+    public void lunch() {
+        super.lunch();
+        System.out.print(" - кассир. ");
     }
 
     @Override

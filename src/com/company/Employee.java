@@ -7,19 +7,23 @@ public class Employee extends Person {
     private double salary;
     private String presence;
 
-    public Employee(String fullName, String telephone) {
-        super(fullName, telephone);
+    public Employee(String fullName, String dateOfBirth, String telephone, String employmentDate, double salary, String presence) {
+        super(fullName, dateOfBirth, telephone);
+        this.employmentDate = employmentDate;
+        this.salary = salary;
+        this.presence = presence;
     }
 
     public void goToWork (){
-        System.out.println("Сотрудники приходят на работу");
+        System.out.print("Сотрудник пришел на работу");
     }
 
     public void lunch (){
-        System.out.println("Сотрудники идут на обед");
+        System.out.print("Сотрудник идет на обед");
     }
+
     public void work (){
-        System.out.println("Делать работу");
+        System.out.println("Сотрудник делает работу");
     }
 
     @Override

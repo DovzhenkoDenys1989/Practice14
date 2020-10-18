@@ -3,45 +3,21 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-       Person person = new Person(".....", ".....");
-       person.hello();
-       person.goodbye();
 
-       Client client = new Client("Максим Максим Мвксимович", "+380975555555");
-       client.aboutProduct();
-       client.buy();
-
-       Employee employee = new Employee(".....", ".....");
-       employee.goToWork();
-       employee.lunch();
-       employee.work();
-
-       Manager manager = new Manager("Петров Петр Петрович", "+380635555555");
-       manager.consultation();
-       manager.forDiscount();
-       manager.giveAdvice();
-       manager.work();
-
-       Cashier cashier = new Cashier("Семенов Семен Семенович", "+380935555555");
-       cashier.countMoney();
-       cashier.work();
-
-       Security security = new Security("Александров Александр Александрович", "+380735555555");
-       security.talkRadio();
-       security.work();
-
+       Client client = new Client("Зарецкая Анастасия Олеговна", "14.01.1996","+380675555555","25%",2000);
+       Manager manager = new Manager("Петров Петр Петрович","21.03.1985","+380635555555","01.02.2015",25000,"с 8.00 - 18.00","Офис");
+       Cashier cashier = new Cashier("Семенов Семен Семенович","25.05.1995", "+380935555555","01.04.2017",15000, "с 8.00 - 20.00", (byte) 2);
+       Security security = new Security("Александров Александр Александрович", "02.08.1992","+380735555555","01.05,2018",16000,"с 8.00 - 20.00");
        Shop shop = new Shop("SportMaster", "проспект Соборный, 45", manager,cashier,security,client);
 
        //1
        shop.open();
-       employee.goToWork();
 
        //2
        shop.sellProduct();
 
        //3
        shop.onlunch();
-       employee.lunch();
     }
 }
 //        1. Наследование. Реализовать иерархию классов с полями и методами

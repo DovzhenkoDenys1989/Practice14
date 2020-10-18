@@ -2,8 +2,8 @@ package com.company;
 
 public class Security extends Employee {
 
-    public Security(String fullName, String telephone) {
-        super(fullName, telephone);
+    public Security(String fullName, String dateOfBirth, String telephone, String employmentDate, double salary, String presence) {
+        super(fullName, dateOfBirth, telephone, employmentDate, salary, presence);
     }
 
     public String talkRadio (){
@@ -12,7 +12,19 @@ public class Security extends Employee {
 
     @Override
     public void work (){
-        System.out.println("Охранник следит за клиентами" + " и " + talkRadio());
+        System.out.println("Охранник следит за клиентом" + " и " + talkRadio());
+    }
+
+    @Override
+    public void goToWork() {
+        super.goToWork();
+        System.out.println(" - охранник.");
+    }
+
+    @Override
+    public void lunch() {
+        super.lunch();
+        System.out.println(" - охранник.");
     }
 
     @Override

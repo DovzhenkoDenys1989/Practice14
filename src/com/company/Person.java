@@ -7,8 +7,15 @@ public class Person {
     private String dateOfBirth;
     private String telephone;
 
+    public Person(String fullName, String dateOfBirth, String telephone) {
+        this.fullName = fullName;
+        this.dateOfBirth = dateOfBirth;
+        this.telephone = telephone;
+    }
+
     public void hello() {
         System.out.println("Привет");
+
     }
     public void goodbye (){
         System.out.println("До свидание");
@@ -36,10 +43,5 @@ public class Person {
                 ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", telephone='" + telephone + '\'' +
                 '}';
-    }
-
-    public Person(String fullName, String telephone) {
-        this.fullName = fullName ;
-        this.telephone = telephone;
     }
 }

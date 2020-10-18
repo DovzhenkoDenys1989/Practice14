@@ -6,13 +6,16 @@ public class Client extends Person {
     private String discount;
     private double money;
 
-    public Client(String fullName, String telephone) {
-        super(fullName, telephone);
+    public Client(String fullName, String dateOfBirth, String telephone, String discount, double money) {
+        super(fullName, dateOfBirth, telephone);
+        this.discount = discount;
+        this.money = money;
     }
 
     public void aboutProduct (){
         System.out.println("Клиент узнает про товары");
     }
+
     public void buy (){
         System.out.println("Клиент покупает товар");
     }

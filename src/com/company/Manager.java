@@ -5,16 +5,19 @@ import java.util.Objects;
 public class Manager extends Employee {
     private String department;
 
-    public Manager(String fullName, String telephone) {
-        super(fullName, telephone);
+    public Manager(String fullName, String dateOfBirth, String telephone, String employmentDate, double salary, String presence, String department) {
+        super(fullName, dateOfBirth, telephone, employmentDate, salary, presence);
+        this.department = department;
     }
 
     public String consultation (){
         return "консультирует клиента";
     }
+
     public String forDiscount () {
         return "расказывает про скидки";
     }
+
     public String giveAdvice () {
         return "советует, какой товар купить";
     }
@@ -22,6 +25,18 @@ public class Manager extends Employee {
     @Override
     public void work (){
         System.out.println("Менеджер" + " " + consultation() + ", " +  forDiscount() + " и " + giveAdvice());
+    }
+
+    @Override
+    public void goToWork() {
+        super.goToWork();
+        System.out.print(" - менеджер. ");
+    }
+
+    @Override
+    public void lunch() {
+        super.lunch();
+        System.out.print(" - менеджер. ");
     }
 
     @Override
